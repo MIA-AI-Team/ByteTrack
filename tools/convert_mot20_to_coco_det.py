@@ -204,6 +204,7 @@ def main():
                             'id': ann_id,
                             'category_id': 1,  # Pedestrian
                             'image_id': target_img['id'],
+                            'track_id': 0,
                             'bbox': bbox,
                             'conf': float(det[6]),  # Preserve confidence score
                             'iscrowd': 0,
