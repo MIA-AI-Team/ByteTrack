@@ -191,13 +191,13 @@ def main():
                         bbox = det[2:6].tolist()
                         
                         # Verify bbox is within image dimensions
-                        if bbox[0] < 0 or bbox[1] < 0 or bbox[0] + bbox[2] > target_img['width'] or bbox[1] + bbox[3] > target_img['height']:
-                            print(f"  Warning: Invalid bbox {bbox} for frame {frame_id}. Adjusting...")
-                            # Adjust bounding box to be within image
-                            bbox[0] = max(0, bbox[0])
-                            bbox[1] = max(0, bbox[1])
-                            bbox[2] = min(bbox[2], target_img['width'] - bbox[0])
-                            bbox[3] = min(bbox[3], target_img['height'] - bbox[1])
+                        # if bbox[0] < 0 or bbox[1] < 0 or bbox[0] + bbox[2] > target_img['width'] or bbox[1] + bbox[3] > target_img['height']:
+                        #     print(f"  Warning: Invalid bbox {bbox} for frame {frame_id}. Adjusting...")
+                        #     # Adjust bounding box to be within image
+                        #     bbox[0] = max(0, bbox[0])
+                        #     bbox[1] = max(0, bbox[1])
+                        #     bbox[2] = min(bbox[2], target_img['width'] - bbox[0])
+                        #     bbox[3] = min(bbox[3], target_img['height'] - bbox[1])
                         
                         # Calculate area
                         area = float(bbox[2] * bbox[3])
